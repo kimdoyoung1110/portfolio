@@ -177,6 +177,15 @@ export const skillCategories: SkillCategory[] = [
       { name: 'GitHub Actions', logo: '/logos/tech/githubactions.svg' },
     ],
   },
+  {
+    title: 'Monitoring & Observability',
+    skills: [
+      { name: 'Sentry', logo: '/logos/tech/sentry.svg' },
+      { name: 'Prometheus', logo: '/logos/tech/prometheus.svg' },
+      { name: 'Grafana', logo: '/logos/tech/grafana.svg' },
+      { name: 'Loki', logo: '/logos/tech/loki.svg' },
+    ],
+  },
 ]
 
 /* ── 프로젝트 ─────────────────────────────────────────── */
@@ -210,7 +219,7 @@ export const projects: Project[] = [
       '개별 Mesh 렌더링 시 약 1,900회 GPU draw call 발생 → InstancedMesh 단일 draw call로 통합 (N회 → 1회)',
       '물리 연산 상태 변경이 전체 리렌더를 유발 → Zustand를 도메인별 독립 store로 분리, 리렌더를 유발하지 않는 상태 아키텍처 설계',
     ],
-    tags: ['React', 'TypeScript', 'Three.js', 'react-three-fiber', 'Zustand', 'TanStack Query', 'Vite'],
+    tags: ['React', 'TypeScript', 'Three.js', 'react-three-fiber', 'Zustand', 'TanStack Query', 'Vite', 'Sentry'],
     repo: 'https://github.com/kimdoyoung1110/gitgalaxy',
     live: 'https://frontend-three-delta-41.vercel.app',
     role: 'Frontend Developer · 팀 프로젝트',
