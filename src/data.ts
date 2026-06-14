@@ -50,7 +50,7 @@ export const timeline: TimelineItem[] = [
     points: ['React · TypeScript 기반 서비스 UI 개발 및 운영'],
   },
   {
-    period: '2026.05 — 2027.01 (예정)',
+    period: '2026.05 — 현재',
     title: '학생연구원',
     org: '인천대학교 인공지능빅데이터센터 연구과제',
     kind: 'research',
@@ -183,6 +183,7 @@ export const skillCategories: SkillCategory[] = [
 export type Project = {
   title: string
   emoji: string
+  logo?: string
   featured?: boolean
   period?: string
   tagline: string
@@ -217,6 +218,7 @@ export const projects: Project[] = [
   {
     title: 'DevRoad',
     emoji: 'DR',
+    logo: '/logos/projects/devroad.png',
     featured: true,
     period: '2025.12 — 2026.01',
     tagline: '개발자의 커리어 결정·성장을 돕는 채용 트렌드 & 모의 면접 서비스',
@@ -235,6 +237,7 @@ export const projects: Project[] = [
   {
     title: 'AI Job Chat',
     emoji: 'AI',
+    logo: '/logos/projects/ai-job-chat.svg',
     tagline: 'AI 상사와 대화하며 직업을 체험하는 진로 탐색 서비스',
     description:
       '학생이 AI 상사와 대화하며 다양한 직무를 가상으로 경험하고, 대화 분석으로 직무 적성 점수를 받는 풀스택 서비스. JWT 인증과 Gemini API를 활용했습니다.',
@@ -245,6 +248,7 @@ export const projects: Project[] = [
   {
     title: 'Instagram Clone',
     emoji: 'IG',
+    logo: '/logos/instagram.svg',
     tagline: '인스타그램 클론 — Frontend & REST API',
     description:
       '인스타그램 핵심 기능을 클론. 프론트는 React·TypeScript, 백엔드는 Spring Boot로 회원·게시물·댓글·좋아요 도메인을 도메인 주도 구조로 설계하며 클린 아키텍처를 학습했습니다.',
@@ -256,6 +260,7 @@ export const projects: Project[] = [
   {
     title: 'Coding Test',
     emoji: 'CT',
+    logo: '/logos/projects/programmers.png',
     tagline: '백준 · 프로그래머스 알고리즘 풀이 기록',
     description:
       '백준 온라인 저지 풀이를 자동으로 푸시하며 알고리즘과 CS 기초 체력을 꾸준히 다지는 저장소입니다.',

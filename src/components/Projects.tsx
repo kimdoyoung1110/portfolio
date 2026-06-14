@@ -12,9 +12,20 @@ function ProjectCard({ p }: { p: Project }) {
 
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
-          <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-sky-accent font-mono text-base font-extrabold tracking-tight text-white shadow-md shadow-brand-500/25">
-            {p.emoji}
-          </span>
+          {p.logo ? (
+            <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-xl border border-line bg-white p-1.5 shadow-sm">
+              <img
+                src={p.logo}
+                alt={`${p.title} 로고`}
+                loading="lazy"
+                className="max-h-full max-w-full object-contain"
+              />
+            </span>
+          ) : (
+            <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-sky-accent font-mono text-base font-extrabold tracking-tight text-white shadow-md shadow-brand-500/25">
+              {p.emoji}
+            </span>
+          )}
           <div>
             <h3 className="text-xl font-bold text-ink">{p.title}</h3>
             <p className="text-sm font-medium text-brand-600">{p.tagline}</p>
