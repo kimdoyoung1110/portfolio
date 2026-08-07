@@ -160,23 +160,24 @@ export const skillCategories: SkillCategory[] = [
       { name: 'React', logo: '/logos/tech/react.svg' },
       { name: 'Next.js', logo: '/logos/tech/nextdotjs.svg' },
       { name: 'Tailwind CSS', logo: '/logos/tech/tailwindcss.svg' },
+      { name: 'TanStack Query', logo: '/logos/tech/reactquery.svg' },
       { name: 'Three.js', logo: '/logos/tech/threedotjs.svg' },
+      { name: 'Vitest', logo: '/logos/tech/vitest.svg' },
       { name: 'Figma', logo: '/logos/tech/figma.svg' },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      { name: 'Django REST', logo: '/logos/tech/django.svg' },
       { name: 'Spring Boot', logo: '/logos/tech/spring.svg' },
+      { name: 'Django REST', logo: '/logos/tech/django.svg' },
     ],
   },
   {
     title: 'DB & Infra',
     skills: [
       { name: 'PostgreSQL', logo: '/logos/tech/postgresql.svg' },
-      { name: 'RabbitMQ', logo: '/logos/tech/rabbitmq.svg' },
-      { name: 'Celery', logo: '/logos/tech/celery.svg' },
+      { name: 'Supabase', logo: '/logos/tech/supabase.svg' },
       { name: 'Docker', logo: '/logos/tech/docker.svg' },
       { name: 'AWS', logo: '/logos/tech/aws.svg' },
       { name: 'GitHub Actions', logo: '/logos/tech/githubactions.svg' },
