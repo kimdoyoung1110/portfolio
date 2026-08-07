@@ -13,7 +13,7 @@ export default function Hero() {
               className="animate-spin-slow absolute -inset-2 rounded-full opacity-80"
               style={{
                 background:
-                  'conic-gradient(from 0deg, #2563eb, #0ea5e9, #93c5fd, #38bdf8, #2563eb)',
+                  'conic-gradient(from 0deg, #1d4ed8, #2563eb, #93c5fd, #38bdf8, #1d4ed8)',
                 filter: 'blur(6px)',
               }}
             />
@@ -86,7 +86,7 @@ export default function Hero() {
         >
           <defs>
             <linearGradient id="heroWaveBack" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#60a5fa" />
+              <stop offset="0%" stopColor="#3b82f6" />
               <stop offset="50%" stopColor="#38bdf8" />
               <stop offset="100%" stopColor="#93c5fd" />
             </linearGradient>
@@ -104,9 +104,9 @@ export default function Hero() {
         >
           <defs>
             <linearGradient id="heroWaveFront" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#2563eb" />
-              <stop offset="50%" stopColor="#0ea5e9" />
-              <stop offset="100%" stopColor="#3b82f6" />
+              <stop offset="0%" stopColor="#1d4ed8" />
+              <stop offset="50%" stopColor="#2563eb" />
+              <stop offset="100%" stopColor="#38bdf8" />
             </linearGradient>
           </defs>
           <path
