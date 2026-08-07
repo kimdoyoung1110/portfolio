@@ -72,14 +72,21 @@ function ProjectCard({ p }: { p: Project }) {
       </div>
 
       <div className="mt-6 flex flex-wrap gap-4 border-t border-line pt-5">
-        <a
-          href={p.repo}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-colors hover:text-brand-600"
-        >
-          <span>⌥</span> GitHub ↗
-        </a>
+        {p.repo && (
+          <a
+            href={p.repo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-colors hover:text-brand-600"
+          >
+            <span>⌥</span> GitHub ↗
+          </a>
+        )}
+        {p.repoNote && (
+          <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-soft/60">
+            <span>⌥</span> {p.repoNote}
+          </span>
+        )}
         {p.live && (
           <a
             href={p.live}
@@ -101,7 +108,7 @@ export default function Projects() {
       <SectionHeading
         index="03"
         title="Projects"
-        subtitle="성능 최적화와 데이터 시각화를 중심으로 한 대표 프로젝트들입니다."
+        subtitle="실서비스 커머스 런칭부터 3D 시각화 · 성능 최적화까지, 대표 프로젝트들입니다."
       />
 
       <div className="grid gap-5 lg:grid-cols-6">

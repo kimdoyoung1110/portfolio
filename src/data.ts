@@ -3,9 +3,9 @@ export const profile = {
   nameEn: 'Doyoung Kim',
   role: 'Frontend Engineer',
   photo: '/profile.jpeg',
-  tagline: '데이터 시각화와 성능 최적화에 강한 프론트엔드 개발자',
+  tagline: '실서비스 커머스를 초기 구축부터 1차 런칭까지 전담한 프론트엔드 개발자',
   summary:
-    "데이터 시각화와 프론트엔드 성능 최적화에 강점을 가진 프론트엔드 개발자입니다. 'DevRoad'에서 1만 개 이상의 데이터를 직관적으로 시각화하고 병목 현상을 해소해 응답 속도를 개선했고, 'GitGalaxy'에서 Three.js 기반 3D 시각화와 Web Worker를 활용한 렌더링 최적화를 구현했습니다. Techeer와 교내 앱센터 등 개발 커뮤니티에 참여하며 지속적으로 성장하고 있습니다.",
+    '슬런치팩토리에서 자사몰 커머스 VeggieVerse를 초기 구축부터 1차 런칭까지 프론트엔드로 전담했습니다(5개 레포 500+ 커밋). 토스페이먼츠 빌링 기반 결제·구독 시스템을 구축하며 결제 실패·품절·타임존 등 돈이 오가는 도메인의 엣지케이스를 설계로 해결했고, CI·테스트·SEO·보안이 없던 프로덕트에 런칭 품질 기준을 세웠습니다. GitGalaxy·DevRoad에서 다진 3D 데이터 시각화·성능 최적화 강점을 실서비스에서 이어가고 있습니다.',
   phone: '010-6655-9883',
   email: 'from.dozero@gmail.com',
   github: 'https://github.com/kimdoyoung1110',
@@ -20,7 +20,7 @@ export const profile = {
   },
 }
 
-export const interests = ['데이터 시각화', '프론트엔드 성능 최적화', 'Three.js · 3D', 'RAG · LLM']
+export const interests = ['커머스 · 결제/구독 시스템', '프론트엔드 성능 최적화', '데이터 시각화 · Three.js', 'RAG · LLM']
 
 /* ── 경력 타임라인 (최신순) ───────────────────────────── */
 export type TimelineItem = {
@@ -38,7 +38,7 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
   {
-    period: '2026 — 현재',
+    period: '2026.05 — 현재',
     title: 'Frontend 인턴',
     org: 'Slunch Factory · 홍대(상수)점',
     kind: 'work',
@@ -47,7 +47,12 @@ export const timeline: TimelineItem[] = [
     logo: '/logos/slunch.png',
     location: '서울 마포구 와우산로3길 38',
     mapUrl: 'https://map.naver.com/p/search/슬런치팩토리%20홍대점',
-    points: ['React · TypeScript 기반 서비스 UI 개발 및 운영'],
+    points: [
+      '자사몰 VeggieVerse B2C 커머스를 초기 구축부터 1차 런칭까지 프론트엔드 전담 — 5개 레포 500+ 커밋',
+      '토스페이먼츠 빌링키 기반 정기결제·결제수단 관리 구축, 결제 흐름 재설계로 첫 구독 결제 실패 문제 해결',
+      'CI 게이트·vitest 테스트·번들 보안 검증·SEO 구조화 등 런칭 품질 기준을 0에서 수립',
+      '운영 관리자·수출 B2B·공장 HACCP 화면과 Spring 백엔드 FOB API까지 서비스 전 영역 기여 (자세히 → Projects)',
+    ],
   },
   {
     period: '2026.05 — 현재',
@@ -199,12 +204,34 @@ export type Project = {
   description: string
   achievements?: string[]
   tags: string[]
-  repo: string
+  repo?: string
+  repoNote?: string
   live?: string
   role: string
 }
 
 export const projects: Project[] = [
+  {
+    title: 'VeggieVerse',
+    emoji: 'VV',
+    logo: '/logos/slunch.png',
+    featured: true,
+    period: '2026.05 — 현재',
+    tagline: '비건 식단 구독 자사몰(B2C 커머스) — 초기 구축부터 1차 런칭까지 프론트엔드 전담',
+    description:
+      'AI 기반 비건 식단 구독 푸드테크 스타트업 슬런치팩토리의 자사몰입니다. 스토어·결제·구독·마이페이지의 B2C 커머스부터 운영 관리자, 수출 B2B, 공장 HACCP 화면까지 5개 레포(500+ 커밋)를 전담 개발해 1차 런칭했습니다.',
+    achievements: [
+      '토스페이먼츠 빌링키 기반 정기결제·결제수단 관리 구축 — 신규 카드 첫 구독 결제가 전부 400으로 실패하던 문제를 발견, 결제 흐름을 "카드 등록 → 주문 생성 → 결제" 순서로 재설계해 해결',
+      '품절 상품이 결제까지 진행되던 경로에 재고 재조회 하드 가드 적용 — 조회 실패 시 전체 결제를 오차단하지 않는 fail-open 설계',
+      'CI가 전무하던 레포에 typecheck·build·test 차단 게이트 신설, vitest 순수함수 테스트 40케이스 작성',
+      '백엔드 오리진의 클라이언트 번들 노출을 빌드 산출물 분석으로 발견 → same-origin 프록시 재구성으로 노출 11건 → 0건, 오픈 SSRF 라우트 제거',
+      'canonical 15페이지·sitemap 276 URL·JSON-LD 구조화 데이터 등 SEO 신설, 정적 에셋 290MB Supabase Storage 이관, 한/영 i18n 구축',
+    ],
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Supabase', 'Toss Payments', 'Vitest'],
+    repoNote: '사내 비공개 레포',
+    live: 'https://slunch.co.kr/',
+    role: 'Frontend 전담 (인턴) · Slunch Factory',
+  },
   {
     title: 'GitGalaxy',
     emoji: 'GG',
@@ -301,7 +328,7 @@ export const education = [
 ]
 
 export const stats = [
-  { value: '10만+', label: '실시간 데이터 포인트 시각화' },
+  { value: '500+', label: '커밋 — 커머스 자사몰 1차 런칭 전담' },
   { value: '60fps', label: '1,900개 오브젝트 3D 렌더' },
   { value: '99%↓', label: '초기 페이로드 최적화' },
 ]

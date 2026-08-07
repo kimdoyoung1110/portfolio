@@ -112,7 +112,7 @@ export default function About() {
       <SectionHeading
         index="01"
         title="About Me"
-        subtitle="데이터 시각화와 프론트엔드 성능 최적화에 강점을 가진 개발자입니다."
+        subtitle="실서비스 커머스 런칭 경험과 성능 최적화 강점을 가진 개발자입니다."
       />
 
       {/* Summary + contact */}

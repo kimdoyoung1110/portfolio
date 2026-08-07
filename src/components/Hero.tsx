@@ -36,8 +36,7 @@ export default function Hero() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-soft sm:text-xl">
-          데이터 시각화와 성능 최적화에 강한{' '}
-          <span className="font-semibold text-ink">{profile.role}</span>입니다.
+          {profile.tagline}입니다.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
