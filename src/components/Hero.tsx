@@ -9,6 +9,14 @@ export default function Hero() {
       <div className="mx-auto max-w-4xl text-center">
         <div className="reveal is-visible mb-7 flex justify-center">
           <div className="relative">
+            <span
+              className="animate-spin-slow absolute -inset-2 rounded-full opacity-80"
+              style={{
+                background:
+                  'conic-gradient(from 0deg, #2563eb, #0ea5e9, #93c5fd, #38bdf8, #2563eb)',
+                filter: 'blur(6px)',
+              }}
+            />
             <span className="absolute -inset-1.5 animate-pulse-glow rounded-full bg-gradient-to-tr from-brand-500 to-sky-accent blur-md" />
             <img
               src={profile.photo}
@@ -69,9 +77,49 @@ export default function Hero() {
         </dl>
       </div>
 
+      {/* waving gradient banner (echoes the GitHub README header) */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-44 overflow-hidden" aria-hidden="true">
+        <svg
+          className="animate-wave-slow absolute bottom-0 left-0 h-full w-[200%]"
+          viewBox="0 0 1600 160"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="heroWaveBack" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#60a5fa" />
+              <stop offset="50%" stopColor="#38bdf8" />
+              <stop offset="100%" stopColor="#93c5fd" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 90 Q 100 40 200 90 T 400 90 T 600 90 T 800 90 T 1000 90 T 1200 90 T 1400 90 T 1600 90 V160 H0 Z"
+            fill="url(#heroWaveBack)"
+            opacity="0.3"
+          />
+        </svg>
+        <svg
+          className="animate-wave absolute bottom-0 left-0 h-full w-[200%]"
+          viewBox="0 0 1600 160"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="heroWaveFront" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#2563eb" />
+              <stop offset="50%" stopColor="#0ea5e9" />
+              <stop offset="100%" stopColor="#3b82f6" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 110 Q 100 60 200 110 T 400 110 T 600 110 T 800 110 T 1000 110 T 1200 110 T 1400 110 T 1600 110 V160 H0 Z"
+            fill="url(#heroWaveFront)"
+            opacity="0.45"
+          />
+        </svg>
+      </div>
+
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ink-soft/50 transition-colors hover:text-brand-500"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ink-soft/60 transition-colors hover:text-brand-600"
         aria-label="아래로 스크롤"
       >
         <span className="block animate-float text-2xl">↓</span>

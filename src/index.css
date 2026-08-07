@@ -4,16 +4,16 @@
   --font-sans: 'Pretendard', 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 
-  /* Light theme palette */
-  --color-canvas: #f7f8fc;
+  /* Light theme palette — blue */
+  --color-canvas: #f5f9ff;
   --color-surface: #ffffff;
-  --color-ink: #1e2438;
-  --color-ink-soft: #5b6478;
-  --color-line: #e7e9f2;
+  --color-ink: #1c2540;
+  --color-ink-soft: #59647e;
+  --color-line: #e4eaf6;
 
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
   --color-sky-accent: #0ea5e9;
   --color-mint: #14b8a6;
 }
@@ -113,6 +113,30 @@ body {
 }
 .animate-pulse-glow {
   animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-wave {
+  animation: wave-move 16s linear infinite;
+}
+.animate-wave-slow {
+  animation: wave-move 26s linear infinite reverse;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 7s linear infinite;
 }
 
 @keyframes blob-drift {

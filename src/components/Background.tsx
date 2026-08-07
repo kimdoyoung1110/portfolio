@@ -13,7 +13,7 @@ export default function Background() {
         className="absolute inset-0 opacity-[0.5]"
         style={{
           backgroundImage:
-            'radial-gradient(circle, rgba(99,102,241,0.10) 1px, transparent 1px)',
+            'radial-gradient(circle, rgba(59,130,246,0.12) 1px, transparent 1px)',
           backgroundSize: '26px 26px',
           maskImage:
             'radial-gradient(ellipse at 50% 0%, black 30%, transparent 78%)',
@@ -29,7 +29,7 @@ export default function Background() {
         style={{ animationDelay: '-6s' }}
       />
       <div
-        className="animate-blob absolute bottom-[-8rem] left-1/3 h-[24rem] w-[24rem] rounded-full bg-teal-200/30 blur-[110px]"
+        className="animate-blob absolute bottom-[-8rem] left-1/3 h-[24rem] w-[24rem] rounded-full bg-blue-300/30 blur-[110px]"
         style={{ animationDelay: '-12s' }}
       />
     </div>
