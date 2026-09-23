@@ -38,6 +38,19 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
   {
+    period: '2026.09 — 현재',
+    title: 'Frontend 인턴',
+    org: 'TIME Korea',
+    kind: 'work',
+    ongoing: true,
+    href: 'https://korea.time.com/',
+    logo: '/logos/timekorea.png',
+    points: [
+      '글로벌 미디어 TIME의 한국 뉴스 플랫폼 프론트엔드 모노레포 개발 — 슬런치 인턴과 병행',
+      '네트워크 최적화 작업 진행 중',
+    ],
+  },
+  {
     period: '2026.05 — 현재',
     title: 'Frontend 인턴',
     org: 'Slunch Factory · 홍대(상수)점',
@@ -52,6 +65,7 @@ export const timeline: TimelineItem[] = [
       '토스페이먼츠 빌링키 기반 정기결제·결제수단 관리 구축, 결제 흐름 재설계로 첫 구독 결제 실패 문제 해결',
       'CI 게이트·vitest 테스트·번들 보안 검증·SEO 구조화 등 런칭 품질 기준을 0에서 수립',
       '운영 관리자·수출 B2B·공장 HACCP 화면과 Spring 백엔드 FOB API까지 서비스 전 영역 기여 (자세히 → Projects)',
+      'AI 초개인화 식단 서비스 실증 PoC의 AI 플랫폼 프론트엔드 개발 중 (2026.09 —)',
     ],
   },
   {
@@ -74,7 +88,10 @@ export const timeline: TimelineItem[] = [
     kind: 'community',
     ongoing: true,
     logo: '/logos/appcenter.png',
-    points: ['교내 공식 IT 서비스(앱/웹) 기획 및 개발 동아리 활동'],
+    points: [
+      '교내 공식 IT 서비스(앱/웹) 기획 및 개발 동아리 활동',
+      '소셜 서비스 memorIN 백엔드 시니어 — 온프레미스 저사양 서버 대상 API 설계 · 코드리뷰 · 성능 튜닝',
+    ],
   },
   {
     period: '2026.03 — 2026.06',
@@ -131,6 +148,7 @@ export const timeline: TimelineItem[] = [
 /* ── 현재 진행 중 (Now) ───────────────────────────────── */
 export const now = [
   { logo: '/logos/slunch.png', label: 'Slunch Factory', role: 'Frontend 인턴 · 홍대(상수)점' },
+  { logo: '/logos/timekorea.png', label: 'TIME Korea', role: 'Frontend 인턴' },
   { logo: '/logos/inu-mascot.png', label: '인천대 AI·빅데이터센터', role: '학생연구원 · RAG / Agent' },
   { logo: '/logos/appcenter.png', label: '인천대 앱센터', role: 'IT 서비스 개발 동아리' },
   { logo: '/logos/techeer.png', label: 'Techeer', role: 'SW 개발자 커리어 그룹' },
@@ -270,6 +288,18 @@ export const projects: Project[] = [
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'TanStack Query', 'Recharts'],
     repo: 'https://github.com/kimdoyoung1110/DevRoad',
     role: 'Frontend Developer · 팀 프로젝트',
+  },
+  {
+    title: 'memorIN',
+    emoji: 'MI',
+    logo: '/logos/appcenter.png',
+    period: '2026.03 — 현재',
+    tagline: '일상 아카이빙 + 통합 메신저 소셜 서비스 — 백엔드 시니어',
+    description:
+      '인천대 앱센터에서 개발 중인 소셜 서비스입니다. 백엔드 시니어로 온프레미스 저사양 서버 환경을 전제로 API를 설계하고, 팀원 코드리뷰와 성능 튜닝을 담당하고 있습니다.',
+    tags: ['Spring Boot 3.5', 'PostgreSQL 18', 'MinIO', 'STOMP'],
+    repo: 'https://github.com/inu-appcenter/memorIN',
+    role: 'Backend Senior · 인천대 앱센터',
   },
   {
     title: 'AI Job Chat',
