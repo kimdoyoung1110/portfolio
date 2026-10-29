@@ -108,7 +108,7 @@ export default function Projects() {
       <SectionHeading
         index="03"
         title="Projects"
-        subtitle="실서비스 커머스 런칭부터 3D 시각화 · 성능 최적화까지, 대표 프로젝트들입니다."
+        subtitle="실서비스 커머스 런칭부터 뉴스 플랫폼 성능 최적화, 사이드 프로젝트 · 공모전 · 해커톤까지 대표 프로젝트들입니다."
       />
 
       <div className="grid gap-5 lg:grid-cols-6">

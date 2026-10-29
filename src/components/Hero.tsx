@@ -31,7 +31,7 @@ export default function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
-          Frontend Intern @ Slunch Factory · Techeer
+          Frontend Intern @ TIME Korea · 광클스탑
         </div>
 
         <h1 className="mt-2 text-5xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-7xl">
